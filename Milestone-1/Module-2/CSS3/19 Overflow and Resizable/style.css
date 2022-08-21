@@ -1,0 +1,15 @@
+#overflow{
+    background-color: gainsboro;
+    border: 2px solid red;
+    width: 500px;
+    height: 300px;
+    /* overflow: scroll; */
+    overflow: auto;
+    /* overflow-x: hidden;
+    overflow-y: scroll; */
+    resize: vertical;
+}
+
+textarea{
+    resize: none;
+}

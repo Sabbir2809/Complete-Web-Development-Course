@@ -1,0 +1,19 @@
+:root{
+    --primary-color: red;
+    --btn-color: lightgreen;
+    --text-color: black;
+    --button-color: blue;
+}
+#fun{
+    background-color: var(--btn-color);
+    width: calc(100% - 200px);
+    height: 200px;
+}
+
+a{
+    padding: 10px 30px;
+    margin: 20px;
+    background-color: var(--button-color);
+    color: var(--text-color);
+    text-decoration: none;
+}

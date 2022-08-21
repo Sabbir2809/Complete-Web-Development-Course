@@ -1,0 +1,14 @@
+Setting up Environment:
+        -Typing
+        -Code Editor
+        -Browser
+        
+Environment:
+    Notepad++
+    VS Code
+    Atom
+    Subline Text
+    Brackets
+Browser:
+    Google Chrome
+    Firefox

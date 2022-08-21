@@ -1,0 +1,27 @@
+/* *,
+*::after,
+*::before{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+} */
+
+#main{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    /* grid-column-gap: 1em;
+    grid-row-gap: 1em; */
+    grid-gap: 1em;
+    grid-auto-rows: minmax(100px, auto);
+    justify-items: start;
+}
+.child{
+    background: red;
+    padding: 1rem;
+    color: white;
+}
+.child:nth-child(odd){
+    background: green;
+}

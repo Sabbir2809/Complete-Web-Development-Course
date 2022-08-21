@@ -1,0 +1,22 @@
+@media screen{
+    p{
+        font-size: 20px;
+    }
+    img{
+        position: relative;
+        left: 20%;
+    }
+
+}
+
+@media print{
+    p{
+        font-size: 15px;
+    }
+    img{
+        display: none;
+    }
+    div{
+        width: 95%;
+    }
+}

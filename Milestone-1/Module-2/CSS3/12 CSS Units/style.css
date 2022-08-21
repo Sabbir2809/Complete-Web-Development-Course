@@ -1,0 +1,16 @@
+html{
+    font-size: 14px;
+}
+#parent{
+    border: 2px solid red;
+    /* height: 50vh;
+    width: 50vw;
+    width: 500px; */
+    font-size: 4rem;
+}
+
+#child{
+    /* border: 2px solid green; */
+    /* width: 50%; */
+    font-style: 2em;
+}

@@ -1,0 +1,38 @@
+/* Element Selector */
+li{
+    color: red;
+}
+
+/* id Selector */
+#list2{
+    color: green;
+}
+
+/* class Selector */
+.list5{
+    color: blue;
+}
+
+/* Pseudo class */
+a:hover{
+    color: tomato;
+}
+
+p::first-line{
+    color: peru;
+}
+
+/* Attribute  */
+a[href="https://www.google.com"]{
+    color: purple;
+}
+
+/* Universal Selector - Debug
+*{
+    border: 1px solid red;
+}
+*/
+
+div a, a{
+    background-color: aqua;
+}

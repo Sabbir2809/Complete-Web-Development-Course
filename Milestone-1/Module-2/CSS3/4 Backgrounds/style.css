@@ -1,0 +1,16 @@
+#bg {
+  background-color: powderblue;
+  background-image: url("../dream-bg.png"), url("../exp-bg.png");
+  background-repeat: no-repeat;
+  background-position: left top, right bottom;
+  /* background-attachment: cover;
+  background-size: contain; */
+}
+
+/* #bg{
+  background: white url('../CSS.jpg') no-repeat fixed 50% 50%;
+} */
+
+body {
+  background-color: darkcyan;
+}

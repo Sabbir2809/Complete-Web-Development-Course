@@ -1,0 +1,12 @@
+#border{
+  /* border: 5px solid green; */
+  border-style: solid dotted double dashed;
+  border-width: 4px 8px 12px 16px;
+  border-color: red green blue black;
+
+  /* border-top-style: solid;
+  border-top-width: 5px;
+  border-top-color: red; */
+
+  border-radius: 20px 40px 60px 80px;
+}

@@ -1,0 +1,24 @@
+li:nth-child(odd){
+    color: red;
+}
+
+input:focus{
+    border: 3px solid green;
+}
+
+/* Pseudo Element */
+p::first-letter{
+    font-size: 35px;
+    color: red;
+}
+h1::before{
+    content: url('../CSS.jpg');
+}
+h1::after{
+    content: " Full Stack";
+}
+
+::selection{
+    color: black;
+    background: yellow;
+}

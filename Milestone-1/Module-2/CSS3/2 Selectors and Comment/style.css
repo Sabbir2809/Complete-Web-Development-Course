@@ -1,0 +1,29 @@
+/* Element Selector */
+p {
+  color: red;
+}
+/* id Selector */
+#css-p {
+  color: blue;
+}
+/* class Selector */
+.green-text {
+  color: green;
+}
+/* Mix Style */
+#heading {
+  text-align: center;
+}
+.underline-h{
+  text-decoration: underline;
+}
+/* Selector Priority */
+#id{
+  color: greenyellow;
+}
+.class{
+  color: blueviolet;
+}
+h4{
+  color: aqua;
+}

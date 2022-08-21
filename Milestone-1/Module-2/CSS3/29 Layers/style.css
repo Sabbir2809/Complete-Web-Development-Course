@@ -1,0 +1,51 @@
+/* 
+1. static (default)
+2. relative
+3. fixed
+4. absolute
+- top, bottom, left, right
+*/
+
+body{
+    height: 1020px;
+}
+
+#parent{
+    padding: 20px;
+    width: 50%;
+    margin: 100px;
+    position: relative; 
+    
+}
+
+#one{
+    width: 200px;
+    height: 200px;
+    background-color: green;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+
+}
+
+#two{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    display: inline-block;
+    position: relative;
+    top: 50px;
+    left: -50px;
+    z-index: 3; 
+}
+
+#three{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+    display: inline-block;
+    position: relative;
+    top: 100px;
+    left: -100px; 
+    z-index: 1;
+}

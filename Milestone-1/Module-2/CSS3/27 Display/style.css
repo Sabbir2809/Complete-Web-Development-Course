@@ -1,0 +1,18 @@
+/* 
+block - div, p, h1-h6, form 
+inline - a, img, span
+inline-block
+none
+*/
+
+.display{
+    border: 1px solid red;
+    width: 50%;
+    height: 100px;
+    display: inline-block;
+}
+
+#div1{
+    display: none;
+    visibility: hidden;
+}

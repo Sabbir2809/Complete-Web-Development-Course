@@ -1,0 +1,9 @@
+div > p{
+    border: 1px solid red;
+    width: 500px;
+    background-color: yellowgreen;
+    margin: 100px;
+    padding: 20px;
+
+    box-shadow: 10px 10px 15px 5px gray;
+}

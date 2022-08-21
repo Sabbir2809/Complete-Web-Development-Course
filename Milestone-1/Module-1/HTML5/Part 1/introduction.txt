@@ -1,0 +1,66 @@
+Q1:What is HTML?
+    -HTML:Hyper Text Markup Language is the standard markup language for ducuments design to be displayed in a web browser.
+
+
+Q2:Why Should we learn HTML?
+    -HTML is the Basic language of Web Design or Web Development.
+    HTML was created by Tim Berners-Lee in late 1991 but was not released officially,Which was published in 1995 as HTML 2.0 HTML 4.01 was published in 1999 and was a major version of HTML. HTML is a very evolving markup language and has evolved with various versions updating.
+
+
+Q3:How HTML Works?
+    Code-> Browser code Read->Output/Text/information
+
+
+Q4:Will i be able to make facebook.com after learning HTML?
+    -I wish i could say YES bout Truth is: HELL NOoo!
+
+
+Q5:Introduction to Tag and Attributes:
+    There are two types of HTML Tags?
+        -Double body Tag: are used to tag content or wrap content
+        <tagname></tagname>
+
+
+        -Single body tag: are used to display content or send command.
+        <tagneme Attributes=""/>
+
+
+Q6:What is Attributes?
+        -All HTML elements can have Attributes.
+        -Attributes provide additional information about an elements.
+        -Attributes are always specifiend in the start tag.
+
+        <img src="image.jpg"/>
+        AttributesName="value"
+
+
+Q7:Four Important Tag to start
+        -<!DOCTYPE html>
+        -<html></html>
+        -<head></head>
+        -<body></body>
+
+
+Q8: How to add Favicon?
+    -Favicon is an external resource,So we nedd to specify href Attributes.
+
+    <link rel="icon" type="images/x-icon" href="favicon.ico">
+    -http://www.favicon-generator.org/
+
+
+Q8: Introduction to meta Tags?
+        -Metadata is used by browsers(how to display content or reload page), and other web services.
+
+-Structure of Meta Tags:There are three types of meta tags:
+
+    -charset <meta charset="utf-8">
+    -name <meta name="author" content="sabbir">
+    -http-equiv <meta http-uquive="refresh" content="5">
+
+Q9:Visible Part of the Web?
+    -Images, video
+    -Text, Audio
+
+
+Q10:What is "px" Bro?
+    Pixels,abbreviated as "px" ,are also a unit of measurement commonly used in graphic and web design, equivalent to roughly 1/96 inch(0.26mm).

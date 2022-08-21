@@ -1,0 +1,17 @@
+#div1{
+    background-color: blueviolet;
+    height: 200px;
+    width: 200px;
+    margin: 100px;
+    transition-property: width, background-color;
+    transition-duration: 1s;
+    transition-delay: 500ms;
+    transition-timing-function: ease-in-out;
+    /* transition: width 2s, height 3s; */
+}
+
+#div1:hover{
+    background-color: red;
+    width: 200px;
+    height: 300px;
+}
