@@ -3,8 +3,8 @@
   background-image: url("../dream-bg.png"), url("../exp-bg.png");
   background-repeat: no-repeat;
   background-position: left top, right bottom;
-  /* background-attachment: cover;
-  background-size: contain; */
+  background-attachment: cover;
+  background-size: contain;
 }
 
 /* #bg{
