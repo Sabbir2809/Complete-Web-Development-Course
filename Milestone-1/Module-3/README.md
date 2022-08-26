@@ -1,1 +1,0 @@
-<embed src="./git-cheat-sheet.pdf" type="application/pdf">
