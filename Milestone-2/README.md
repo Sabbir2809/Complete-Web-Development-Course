@@ -1,6 +1,6 @@
 ## Milestone-2: Responsive Web Layout
 
-### Module-6: HTML5 Semantic Tags, Audio, Video, Table, Form
+#### Module-6: HTML5 Semantic Tags, Audio, Video, Table, Form
 
 - audio, video, iframe Tags
 - Semantic tags(header, nav, section, main, article, asidebar, footer)
@@ -15,7 +15,7 @@
 
   <br>
 
-### Module-7: More CSS, Icon, CSS3 Animation
+#### Module-7: More CSS, Icon, CSS3 Animation
 
 - visibility hidden vs display none
 - overflow visible, hidden, scroll, text-overflow, ellipsis
@@ -28,7 +28,7 @@
 
   <br>
 
-### Module-8: Responsive CSS Layout
+#### Module-8: Responsive CSS Layout
 
 - Introduction to Website Layout (grid, flex)
 - flexbox, flex direction, justify-content, align-items
