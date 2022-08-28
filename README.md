@@ -85,3 +85,14 @@
 - transition & transform
 - float left, float right, min-height, max-height, cursor
   <br>
+
+#### Module-8: Responsive CSS Layout
+
+- Introduction to Website Layout (grid, flex)
+- flexbox, flex direction, justify-content, align-items
+- Create Login form & flexible nav using flexbox
+- grid, gri-layout-templete-columns, grid gap
+- Create calendar using grid & flexbox
+- Explore Responsiveness using Media Query
+- Seven things you need to do to make a website responsive
+- All CSS properties everything you need to know about CSS
