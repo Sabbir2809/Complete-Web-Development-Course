@@ -100,3 +100,13 @@
 #### Module-9: HTML CSS only Landing Page
 
 - Leader Board Project
+
+#### Module-9.5: Practice Day
+
+- Flexbox with Media Query
+
+#### Module-10: Assignment-2
+
+- World-Cup Project
+
+
