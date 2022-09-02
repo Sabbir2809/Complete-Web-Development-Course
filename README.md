@@ -97,6 +97,6 @@
 - Seven things you need to do to make a website responsive
 - All CSS properties everything you need to know about CSS
 
-#### Module-8: HTML CSS only Landing Page
+#### Module-9: HTML CSS only Landing Page
 
 - Leader Board Project
