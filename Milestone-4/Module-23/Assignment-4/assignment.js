@@ -78,13 +78,20 @@ function publicBusFare(numberOfPeople){
 
 
 // :::::: Problem-5: isBestFriend ::::::
-function isBestFriend(friends){
-  // When the condition is met, we are best friends.
-  if((friends[0].name.toLowerCase() === friends[1].friend.toLowerCase()) && (friends[1].name.toLowerCase() === friends[0].friend.toLowerCase())){
-    return true;
+// Problem-5: isBestFriend
+function isBestFriend(f1, f2){
+  // true condtion and Error handling
+  if(typeof f1 === "object" && typeof f2 === "object"){
+    if((f1["name"].toLowerCase() === f2["friend"].toLowerCase()) && (f2["name"].toLowerCase() === f1["friend"].toLowerCase())){
+      return true;
+    }
+    // false condtion
+    else{
+      return false;
+    }
   }
-  // If the condition is false, we are not best friends.
+  // code that may throw an error
   else{
-    return false;
+    console.log("This Input is Incorrect! Please provide a Valid Object");
   }
 }

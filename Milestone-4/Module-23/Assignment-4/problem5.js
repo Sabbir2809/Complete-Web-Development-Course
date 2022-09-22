@@ -1,12 +1,18 @@
 // Problem-5: isBestFriend
-function isBestFriend(friends){
-  // If Condition is True
-  if((friends[0].name.toLowerCase() === friends[1].friend.toLowerCase()) && (friends[1].name.toLowerCase() === friends[0].friend.toLowerCase())){
-    return true;
+function isBestFriend(f1, f2){
+  // true condtion and Error handling
+  if(typeof f1 === "object" && typeof f2 === "object"){
+    if((f1["name"].toLowerCase() === f2["friend"].toLowerCase()) && (f2["name"].toLowerCase() === f1["friend"].toLowerCase())){
+      return true;
+    }
+    // false condtion
+    else{
+      return false;
+    }
   }
-  // If Condition is False
+  // code that may throw an error
   else{
-    return false;
+    console.log("This Input is Incorrect! Please provide a Valid Object");
   }
 }
 
