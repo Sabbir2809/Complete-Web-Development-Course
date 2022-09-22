@@ -23,7 +23,6 @@
 - for Loop
 - while Loop
 
-
 #### Module-19: Core Concepts, Function & Objects
 
 #### Module-20: Apply JavaScript Concepts
@@ -37,6 +36,7 @@
 - split(), slice(), substr(), substring(), concat(), join()
 - Math, abs(), pow(), round(), ceil(), floor(), random()
 - swap variable, destructing
+
 #### Module-22: More JS Coding Problems
 
 - isArray(), includes(), concat()
@@ -51,3 +51,11 @@
 #### Module-22.5: Practice Basic JavaScript
 
 - Basic JavaScript Concept Checklist & Practice
+
+#### Module-23: Assignment
+
+- Problem-1: isBestFriend()
+- Problem-2: isJavaScriptFile()
+- Problem-3: oilPrice()
+- Problem-4: publicBusFare()
+- Problem-5: isBestFriend()

@@ -181,3 +181,14 @@
 #### Module-22.5: Practice Basic JavaScript
 
 - Basic JavaScript Concept Checklist & Practice
+
+#### Module-23: Assignment
+
+- Problem-1: isBestFriend()
+- Problem-2: isJavaScriptFile()
+- Problem-3: oilPrice()
+- Problem-4: publicBusFare()
+- Problem-5: isBestFriend()
+
+---
+
