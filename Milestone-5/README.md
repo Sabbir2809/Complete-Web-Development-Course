@@ -8,6 +8,6 @@
 
 -What is dom, Connect your JS file with html file
 
-#### Module-25: Simple Interactive Bank Website
+#### Module-26: Simple Interactive Bank Website
 
 -What is dom, Connect your JS file with html file
