@@ -248,4 +248,13 @@
 
 #### Module-29.5: Integrate JavaScript Bonus Content
 
+---
+
+## Milestone-6: JS Intermediate JavaScript, API
+
+#### JS Recap & Basic ES6, ES2015
+
+- Recap of DOM Manipulation and event handler
+
+- ES6 Intro difference between var, Let and const
 
