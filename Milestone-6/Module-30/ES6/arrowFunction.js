@@ -11,14 +11,12 @@ let messege = (m) => {
 };
 messege("I'm a Arrow Function.");
 
-
-let numbers = (...n) =>{
+let numbers = (...n) => {
   console.log(n);
 };
 numbers(1, 9, 2, 1, 5, 2, 8, 0, 9);
 
-
 let arrowReturnFunction = () => {
-  return "Hello, Arrow Function."
+  return 'Hello, Arrow Function.';
 };
 console.log(arrowReturnFunction());

@@ -2,9 +2,9 @@
 using var keyword:
   - var can be Re-Declared & Re-Assigned a value.
 */
-var favoriteColor = "White";
-favoriteColor = "Black"; // Re-Assigned
-var favoriteColor = "PowderBlue"; // Re-Declared
+var favoriteColor = 'White';
+favoriteColor = 'Black'; // Re-Assigned
+var favoriteColor = 'PowderBlue'; // Re-Declared
 console.log(favoriteColor);
 
 /*
@@ -23,23 +23,20 @@ Using const keyword:
   - it is Block Scope.
   - It can't be Re-Assigned and Re-Declared a value.
 */
-const varsityName = "DIU";
+const varsityName = 'DIU';
 // varsityName = "DSC";
 console.log(varsityName);
 
-
-
 // Global Scope
-let department = "CSE";
+let department = 'CSE';
 function globalScope() {
   console.log(department);
 }
 globalScope();
 
-
 // Local Scope
 function localScope() {
-  let language = "JS";
+  let language = 'JS';
   console.log(language);
 }
 localScope();

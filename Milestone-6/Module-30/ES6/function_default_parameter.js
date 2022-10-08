@@ -1,4 +1,4 @@
-function add(first = 0, second = 0){
+function add(first = 0, second = 0) {
   // second = second || 0;
   // if(second === undefined){
   //   second = 0;

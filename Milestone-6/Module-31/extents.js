@@ -1,74 +1,72 @@
-class teamMember{
+class teamMember {
   name;
   location;
-  constructor(name, location){
+  constructor(name, location) {
     this.name = name;
     this.location = location;
   }
-  provideFeedback(){
+  provideFeedback() {
     console.log(`${this.name} Thank You for your Feedback`);
   }
 }
 
-class Instructor extends teamMember{
+class Instructor extends teamMember {
   name;
   designation = 'Web Couse Instructor';
   team = 'Web Team';
   location;
 
-  constructor(name, location){
+  constructor(name, location) {
     super(name, location);
   }
 
-  startSupportSession(time){
+  startSupportSession(time) {
     console.log(`Start The Support Session at ${time}`);
   }
-  createQuiz(module){
+  createQuiz(module) {
     console.log(`Please Create Quiz for Module ${module}`);
   }
 }
 
-
-class Developer extends teamMember{
+class Developer extends teamMember {
   designation = 'Web Couse Instructor';
   team = 'Web Team';
   tech;
 
-  constructor(name, location, tech){
+  constructor(name, location, tech) {
     super(name, location);
     this.tech = tech;
   }
 
-  developFeature(feature){
+  developFeature(feature) {
     console.log(`Please Develop the ${feature}`);
   }
-  release(version){
+  release(version) {
     console.log(`Please Release the version ${version}`);
   }
 }
 
-class JobPlacement extends teamMember{
+class JobPlacement extends teamMember {
   designation = 'Job Placement';
   team = 'Web Team';
   region;
 
-  constructor(name, location, region){
+  constructor(name, location, region) {
     super(name, location);
     this.region = region;
   }
 
-  provideResume(feature){
+  provideResume(feature) {
     console.log(`Please Develop the ${feature}`);
   }
-  prepareStudent(version){
+  prepareStudent(version) {
     console.log(`Please Release the version ${version}`);
   }
 }
 
-const sabbir = new Developer('Sabbir Hossain', "Savar", 'React.Js');
+const sabbir = new Developer('Sabbir Hossain', 'Savar', 'React.Js');
 console.log(sabbir);
-sabbir.provideFeedback("Awesome");
+sabbir.provideFeedback('Awesome');
 
-
-const zarin = new JobPlacement('Umme Salma Zarin', "Dhaka", "Bangladesh");
+const zarin = new JobPlacement('Umme Salma Zarin', 'Dhaka', 'Bangladesh');
 console.log(zarin);

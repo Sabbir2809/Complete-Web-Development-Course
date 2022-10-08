@@ -20,8 +20,8 @@
 1. spread operator: [...numbers, 15, 19]
 1. destructuring
 
-- object destructuring; how to get property name as variable
-- array destructuring: const [a, b] = [1, 3, 4]
+  - object destructuring; how to get property name as variable
+  - array destructuring: const [a, b] = [1, 3, 4]
 
 1. default parameter
 1. forEach()
