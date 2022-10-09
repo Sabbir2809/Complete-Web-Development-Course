@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Application Programming Interface (API)</title>
+  <style>
+    .post{
+      background-color: lightblue;
+      padding: 15px;
+      margin: 10px;
+      border-radius: 10px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Button -->
+  <button onclick="loadDataOne()">Load Data One</button>
+  <!-- User Section -->
+  <div class="users-container">
+    <h2>User Information</h2>
+    <ul id="users-list">
+    </ul>
+    <button onclick="loadUsers()">Display Users Data</button>
+  </div>
+  <!-- Posts Section -->
+  <header>
+    <h2>Display All Post</h2>
+  </header>
+  <main>
+    <section>
+      <h3>All Posts are here</h3>
+      <div id="posts-container">
+
+      </div>
+    </section>
+  </main>
+  <!-- JS File -->
+  <script src="./post.js"></script>
+  <script src="./user.js"></script>
+  <script src="./fetch.js"></script>
+</body>
+</html>
