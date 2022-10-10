@@ -20,3 +20,12 @@
 - class
 - inheritance, super, extends
 - Prototypical Inheritance
+
+#### Module-32: API, JSON, Data Load, Dynamic Website
+
+- What is an API
+- Introduction to JSON Structure, parse, stringify
+- JSON Placeholder, GET data, Display on UI
+- Dynamically Display Loaded Data on Website
+- GET, POST, PATCH, DELETE, CRUD, GET VS POST
+- Debug API, Network Tab, Status Code
