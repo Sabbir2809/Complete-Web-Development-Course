@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The MealDB </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+</head>
+<body>
+  <!-- Header Section -->
+  <header>
+    <h1 class="text-center text-warning">Select Your Meal</h1>
+  </header>
+  <!-- Main Section -->
+  <main>
+    <section class="container mb-5">
+      <div id="detail-container">
+        
+      </div>
+    </section>
+    <!-- Input Field -->
+    <section class="input-group mb-3 container">
+      <button onclick="searchFood()" class="btn btn-warning" type="button">Search</button>
+      <input id="search-field" type="search" class="form-control" placeholder="Find Your Meal">
+    </section>
+    <!-- Meal Container -->
+    <section class="container">
+      <div id="meal-container" class="row row-cols-1 row-cols-md-3 g-4">
+        <!-- Push Meal Card use JS -->
+      </div>
+    </section>
+  </main>
+  <script src="./app.js"></script>
+</body>
+</html>

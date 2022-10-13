@@ -1,12 +1,12 @@
 const displayCounties = () => {
   fetch('https://restcountries.com/v3.1/all')
-  .then(res => res.json())
-  .then(data => loadCountry(data))
-}
+    .then((res) => res.json())
+    .then((data) => loadCountry(data));
+};
 
-const loadCountry = (counties) =>{
+const loadCountry = (counties) => {
   const divContainer = document.getElementById('country-container');
-  counties.forEach(country => {
+  counties.forEach((country) => {
     const divCountry = document.createElement('div');
     divCountry.classList.add('country');
     divCountry.innerHTML = `
@@ -16,15 +16,15 @@ const loadCountry = (counties) =>{
     `;
     divContainer.appendChild(divCountry);
   });
-}
+};
 
 const loadCountryDetail = (code) => {
   // https://restcountries.com/v2/alpha/{code}
-  const url = `https://restcountries.com/v3.1/alpha/${code}`
+  const url = `https://restcountries.com/v3.1/alpha/${code}`;
   fetch(url)
-  .then(res => res.json())
-  .then(data => displayCountryDetail(data[0]))
-}
+    .then((res) => res.json())
+    .then((data) => displayCountryDetail(data[0]));
+};
 
 const displayCountryDetail = (country) => {
   const countryContainer = document.getElementById('country-detail');
@@ -32,6 +32,6 @@ const displayCountryDetail = (country) => {
     <img src='${country.flags.svg}'>
     <h4>Capital: ${country.capital}</h4>
   `;
-}
+};
 
 displayCounties();

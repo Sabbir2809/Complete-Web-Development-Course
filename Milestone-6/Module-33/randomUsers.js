@@ -1,13 +1,13 @@
 const loadUsers = () => {
   fetch('https://randomuser.me/api/?results=10')
-  .then(res => res.json())
-  .then(data => displayUsers(data.results))
-}
+    .then((res) => res.json())
+    .then((data) => displayUsers(data.results));
+};
 
 const displayUsers = (users) => {
   const usersContainer = document.getElementById('users-container');
-  for(const user of users){
-    console.log(user)
+  for (const user of users) {
+    console.log(user);
     const userDiv = document.createElement('div');
     userDiv.classList.add('user');
     userDiv.innerHTML = `
@@ -18,6 +18,6 @@ const displayUsers = (users) => {
     `;
     usersContainer.appendChild(userDiv);
   }
-}
+};
 
 loadUsers();
