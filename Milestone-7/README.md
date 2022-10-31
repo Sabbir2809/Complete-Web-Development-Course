@@ -21,3 +21,25 @@
 - set and read simple value form local, session storage
 - Implement local storage interactions for a shopping cart
 - store and retrieve object to local storage
+
+#### Module-39: Understand Common JavaScript Concepts
+
+#### Module-40: Dev Tool & Debug Projects
+
+#### Module-41: Few More JavaScript & Debug
+
+#### Module-42: JavaScript you need to know for React
+
+- Six JavaScript Fundamentals that you need to know (variable, condition, loop, array, function, )
+- Template string, arrow function, spread operator
+- Array methods(map(), filter(), find(), forEach())
+- Array & Object Destructuring, Optional Chaining
+- JSON, fetch, keys, values, array add, remove using dots
+- truthy, falsy & Ternary Operator
+- Explore LocalStorage & SessionStorage with JSON
+
+#### Module-43: Assignment-7
+
+- Fix Type Monster issues & Conceptual Question
+
+#### Module-43.5: Browser Debug Bonus Video
