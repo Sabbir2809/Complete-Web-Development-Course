@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Md. Sabbir Hossain" />
+    <title>Blogs</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500&display=swap"
+      rel="stylesheet" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous" />
+  </head>
+  <body>
+    <main class="card text-center">
+      <div class="card-header bg-dark text-white">
+        <h1>Blog</h1>
+      </div>
+      <!-- Container -->
+      <div class="card-body">
+        <div class="row">
+          <div class="col-sm-6">
+            <!-- Question-1 -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-success">
+                  Difference Between Local Storage, Session Storage
+                </h3>
+                <p class="card-text text-start">
+                  <strong>Local storage</strong> is the most recent mechanism. It allows for larger
+                  amounts of data to be stored, but the data is not deleted when the browser is
+                  closed. Local storage is useful for storing data that the user will need to access
+                  later, such as offline data.
+                </p>
+                <p class="card-text text-start">
+                  <strong>Session storage</strong> is similar to cookies, but the data is only
+                  stored for the current session. This means that the data will be deleted when the
+                  user closes the browser. Session storage is useful for storing data that is
+                  sensitive, such as login credentials.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- Question-2 -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-success">
+                  Difference between Global scope and Block scope
+                </h3>
+                <p class="card-text text-start">
+                  <strong>Global Scope: </strong> The variables defined outside of any function or
+                  curly brackets are known as global variables and have global scope. Global scope
+                  means that the variables can be accessed from any part of that program, any
+                  function or conditional state can access that variable.
+                </p>
+                <p class="card-text text-start">
+                  <strong>Local Scope: </strong> If you were to define some variables inside curly
+                  brackets {} or inside a specific function then those variables are called local
+                  variables The local variables have a very confined scope which is called the local
+                  scope But, with the release of ES6, the local scope was further broken down into
+                  two different scopes:
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-5">
+          <div class="col-sm-6">
+            <!-- Question-3 -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-success">What is Event Loop</h3>
+                <p class="card-text text-start">
+                  The Event Loop is responsible for executing the JavaScript code. It first
+                  evaluates and executes the script, then processes Tasks and Microtasks.Tasks and
+                  Microtasks are scheduled, synchronous blocks of code. They are executed one at a
+                  time, and are placed in the Task Queue and Microtask Queue, respectively.For all
+                  of these, the Call Stack is used to keep track of function calls.Whenever
+                  Microtasks are executed, the Microtask Queue must be emptied out before the next
+                  Task can be executed. Rendering occurs between Tasks, but not between Microtasks.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <!-- Question-4 -->
+            <div class="card">
+              <div class="card-body">
+                <h3 class="card-title text-success">JavaScript Undefined Type</h3>
+                <p class="card-text text-start">
+                  JavaScript provides some primitive as well as non-primitive data types. For
+                  example “null”, “boolean”, “undefined”, etc. belong to the primitive data type
+                  while “arrays”, and “objects” are non-primitive or complex data types. In
+                  JavaScript, any variable that is not assigned with any value has a default value
+                  of “undefined”.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
