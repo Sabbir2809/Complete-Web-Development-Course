@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countries API</title>
+  <style>
+    h1{
+      text-align: center;
+      background-color: mediumseagreen;
+      color: white;
+      padding: 5px;
+    }
+    #countries{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 20px;  
+    }
+    
+    .country{
+      background-color: #E7E9EB;
+      border: 5px solid green;
+      border-radius: 20px;
+      padding: 20px;
+    }
+    .country img{
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <h1>All Country</h1>
+  <header>
+    <section id="countries">
+
+    </section>
+  </header>
+  <!-- JS File -->
+  <script src="./app.js"></script>
+</body>
+</html>
