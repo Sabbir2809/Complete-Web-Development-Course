@@ -1,0 +1,26 @@
+.App {
+  text-align: center;
+  background-color: yellow;
+  border-radius: 15px;
+  border: 3px solid black;
+}
+
+button{
+  padding: 10px 30px;
+  background-color: black;
+  color: yellow;
+  font-weight: 800;
+  margin: 10px;
+  cursor: pointer;
+}
+.users-container{
+  background-color: black;
+  color: aliceblue;
+  border-radius: 10px;
+  padding: 5px;
+}
+
+.user-container{
+  border: 2px solid yellow;
+  margin: 5px;
+}
