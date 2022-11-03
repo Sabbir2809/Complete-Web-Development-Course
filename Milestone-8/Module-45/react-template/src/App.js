@@ -1,28 +1,26 @@
 import './App.css';
 
 function App() {
+  const tools = ['VS Code', 'Git', 'GitHub', 'Figma'];
   return (
     <div>
       <div className='container'>
         <h1>React.JS</h1>
         <p>A JavaScript library for building user interfaces</p>
       </div>
-      <Tools />
+      {tools.map((tool) => (
+        <Tools tool={tool}></Tools>
+      ))}
       <FrontEnd Language='JavaScript' framework='React.JS' />
       <BackEnd server='Node.JS' database='MongoDB' />
     </div>
   );
 }
 
-function Tools() {
-  const tools = ['VS Code', 'Git & GitHub'];
+function Tools(props) {
   return (
     <div className='tools'>
-      {tools.map((tool) => (
-        <ul>
-          <li>{tool}</li>
-        </ul>
-      ))}
+      <h3>{props.tool}</h3>
     </div>
   );
 }
