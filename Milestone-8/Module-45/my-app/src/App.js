@@ -13,18 +13,18 @@ function Counter() {
   // State
   const [count, setCount] = useState(0);
   // Decrement onClick Function
-  const decrement = () => {
+  const handleDecrement = () => {
     const newCount = count - 1;
     setCount(newCount);
   };
   // Increment onClick Function
-  const increment = () => setCount(count + 1);
+  const handleIncrement = () => setCount(count + 1);
 
   return (
     <div>
       <h1>{count}</h1>
-      <button onClick={decrement}> - </button>
-      <button onClick={increment}> + </button>
+      <button onClick={handleDecrement}> - </button>
+      <button onClick={handleIncrement}> + </button>
     </div>
   );
 }
