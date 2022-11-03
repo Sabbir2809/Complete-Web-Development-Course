@@ -1,8 +1,9 @@
 import './App.css';
+
 function App() {
   return (
     <div>
-      <h1>React JS</h1>
+      <h1>Hello React JS</h1>
     </div>
   );
 }
