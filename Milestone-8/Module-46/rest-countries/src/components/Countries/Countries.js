@@ -13,13 +13,7 @@ const Countries = () => {
   return (
     <div className='countries'>
       {countries.map((country) => (
-        <Country
-          name={country.name.common}
-          logo={country.flags.png}
-          population={country.population}
-          capital={country.capital}
-          region={country.region}
-        />
+        <Country country={country} />
       ))}
     </div>
   );

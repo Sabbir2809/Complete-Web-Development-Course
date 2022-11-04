@@ -1,11 +1,14 @@
-import './App.css';
-import Countries from './component/Countries/Countries';
+import Countries from './components/Countries/Countries';
+import Footer from './components/Footer/Footer';
+import './components/Footer/Footer.css';
+import Header from './components/Header/Header';
 
 function App() {
   return (
     <div>
-      <h1 className='title'>All COUNTRIES</h1>
+      <Header />
       <Countries />
+      <Footer />
     </div>
   );
 }
