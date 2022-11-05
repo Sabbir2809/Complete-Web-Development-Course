@@ -10,3 +10,7 @@
 - state
 - addEventHandler
 - External Data Load
+
+#### Module-46: Simple React Rest Countries
+
+#### Module-46: React Core Concept Recap & Practice Day
