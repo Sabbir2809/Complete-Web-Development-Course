@@ -13,4 +13,8 @@
 
 #### Module-46: Simple React Rest Countries
 
-#### Module-46: React Core Concept Recap & Practice Day
+#### Module-46.5: React Core Concept Recap & Practice Day
+
+#### Module-47: How React Works
+
+#### Module-48: Simple React SPA with simple e-commerce
