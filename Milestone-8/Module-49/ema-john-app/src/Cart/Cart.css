@@ -1,0 +1,9 @@
+.cart{
+  position: sticky;
+  top: 0;
+  padding: 50px;
+}
+
+.cart-info p{
+  padding-top: 20px;
+}

@@ -11,8 +11,6 @@
 }
 .cart-container{
   background-color: #FF99004D;
-  height: 90vh;
-  padding: 20px;
 }
 @media screen and (max-with: 1100px) {
   .products-container{

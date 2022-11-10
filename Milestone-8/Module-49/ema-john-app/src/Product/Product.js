@@ -9,11 +9,11 @@ const Product = ({ product, handleAddToCard }) => {
   const { name, seller, price, ratings, img } = product;
 
   return (
-    <div className='product'>
-      <img src={img} alt='product img' />
-      <div className='product-top'>
-        <p className='product-name'>{name}</p>
-        <div className='product-bottom'>
+    <div className="product">
+      <img src={img} alt="product img" />
+      <div className="product-top">
+        <p className="product-name">{name}</p>
+        <div className="product-bottom">
           <p>Price: ${price}</p>
           <p>
             <small>Seller: {seller}</small>
@@ -23,7 +23,7 @@ const Product = ({ product, handleAddToCard }) => {
           </p>
         </div>
       </div>
-      <button onClick={() => handleAddToCard(product)} className='btn-cart'>
+      <button onClick={() => handleAddToCard(product)} className="btn-cart">
         <p>
           Add to Cart <FontAwesomeIcon icon={faShoppingCart} />
         </p>
