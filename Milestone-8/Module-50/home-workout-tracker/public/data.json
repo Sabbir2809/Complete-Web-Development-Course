@@ -1,0 +1,82 @@
+[
+  {
+    "id" : "1",
+    "title" : "Planks",
+    "info" : "Planks target your abdominal muscles but give other muscles in your arms.",
+    "img" : "https://miro.medium.com/max/828/1*WWjYs5yzLKj5WCOkdf8j0A.jpeg",
+    "age" : "15-25",
+    "time" : 60
+  },
+  {
+    "id" : "2",
+    "title" : "Lunges",
+    "info" : "Lunges strengthen your legs and glutes, stretching the muscles at the same time.",
+    "img" : "https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2016/07/29125218/forward-lunge-dumbbell-man.jpg",
+    "age" : "20-25",
+    "time" : 45
+  },
+  {
+    "id" : "3",
+    "title" : "Pushups",
+    "info" : "Pushups involve multiple muscle groups and are a highly effective strengthening exercise.",
+    "img" : "https://qph.cf2.quoracdn.net/main-qimg-dd9588df1da794dc829f5dc81b962693.webp",
+    "age" : "18-22",
+    "time" : 30
+  },
+  {
+    "id" : "4",
+    "title" : "Squats",
+    "info" : "Squats are a great way to strengthen your core and lower body. And because you’re using large muscles",
+    "img" : "https://img-4.linternaute.com/-xJtdqszf0oWjox4t1Tzot5wav4=/1500x/smart/6cb68a39a9e04f249f5f07494f722e96/ccmcms-linternaute/10763352.jpg",
+    "age" : "12-20",
+    "time" : 40
+  },
+  {
+    "id" : "5",
+    "title" : " Overhead dumbbell presses",
+    "info" : "Using two 10-pound dumbbells, this exercise engages muscles in your shoulders, upper back, and core.",
+    "img" : "https://cdn.mos.cms.futurecdn.net/LsqTqWvgpqXaCtdJoryCWn-1200-80.jpg",
+    "age" : "15-25",
+    "time" : 30
+  },
+  {
+    "id" : "6",
+    "title" : "Single-leg deadlifts",
+    "info" : "Using one 10-pound dumbbell, this exercise improves leg strength and balance.Hold a dumbbell in your right hand ",
+    "img" : "https://img.freepik.com/premium-vector/single-leg-deadlift-exercise-woman-workout-fitness-aerobic-exercises_476141-933.jpg?w=2000",
+    "age" : "18-24",
+    "time" : 60
+  },
+  {
+    "id" : "7",
+    "title" : "Dumbbell rows",
+    "info" : "This exercise uses two 10-pound dumbbells and strengthens multiple upper-body muscles.",
+    "img" : "https://media.istockphoto.com/id/1407962419/vector/man-doing-single-arm-bent-over-row-exercise-flat-vector-illustration-isolated-on-white.jpg?s=612x612&w=0&k=20&c=jN-GJvvlh6f0WXtZLSq50VJrJsxjSX608A0TLynMrwI=",
+    "age" : "16-24",
+    "time" : 50
+  },
+  {
+    "id" : "8",
+    "title" : "Side planks",
+    "info" : "Side planks help strengthen your core. Do 3 sets of 10 on each side. Lower your hips back to the floor and repeat.",
+    "img" : "https://bod-blog-assets.prod.cd.beachbodyondemand.com/bod-blog/wp-content/uploads/2022/07/29135109/Side_Plank_Hip_Lift_770.jpeg",
+    "age" : "18-30",
+    "time" : 45
+  },
+  {
+    "id" : "9",
+    "title" : "Glute bridge",
+    "info" : "This exercise strengthens your glutes. Hold for a second or two at the top of your lift, then lower your hips back to the floor. ",
+    "img" : "https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/glutebridge-1603107150.jpg?resize=480:*",
+    "age" : "16-30",
+    "time" : 30
+  },
+  {
+    "id" : "10",
+    "title" : "Burpees",
+    "info" : "Burpees strengthen multiple muscle groups and also provide a great cardiovascular workout.",
+    "img" : "https://s3.ap-south-1.amazonaws.com/media-drinsta/blogs/what-are-the-benefits-of-burpees-exercise/hhhh.jpg",
+    "age" : "15-25",
+    "time" : 50
+  }
+]

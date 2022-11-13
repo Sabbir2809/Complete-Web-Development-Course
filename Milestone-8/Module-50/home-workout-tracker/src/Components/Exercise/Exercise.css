@@ -1,0 +1,11 @@
+.main-container{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+.exercise{
+  margin: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+

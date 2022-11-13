@@ -1,0 +1,26 @@
+.activity{
+  position: sticky;
+  top: 0;
+  margin-top: 30px;
+  padding: 15px;
+  background-color: #f0f9ff;
+  border: 1px solid #94a3b8;
+  border-radius: 8px;
+  height: 100vh;
+}
+
+.activity div{
+  margin-top: 20px;
+}
+
+.title{
+  color: #0ea5e9;
+}
+
+.exercise-details h2{
+  margin-top: 15px;
+}
+
+.bio{
+  margin: 10px;
+}

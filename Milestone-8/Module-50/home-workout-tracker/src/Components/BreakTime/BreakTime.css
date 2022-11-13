@@ -1,0 +1,29 @@
+.user-info{
+  display: flex;
+  justify-content: space-around;
+  background-color: #0ea5e9;
+  color: white;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.break-time{
+  display: flex;
+  justify-content: space-around;
+  background-color: #0ea5e9;
+  color: whitesmoke;
+  border-radius: 5px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.break-time > h4{
+  border: 1px solid whitesmoke;
+  border-radius: 50px;
+  padding: 5px;
+}
+
+.break-time > h4:hover{
+  background-color: aliceblue;
+  color: black;
+}
