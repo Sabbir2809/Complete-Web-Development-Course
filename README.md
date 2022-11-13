@@ -411,3 +411,9 @@
 - Client Side Rendering(CSR) & Server Side Rendering(SSR)
 
 ---
+
+## Milestone-9: React Router & State
+
+#### Module-51: Bootstrap, Tailwind CSS, Axios, Rechart
+
+-
