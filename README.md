@@ -414,7 +414,9 @@
 
 ## Milestone-9: React Router & State
 
-#### Module-51: Bootstrap, Tailwind CSS, Axios, Rechart
+#### Module-51: Bootstrap, Tailwind CSS, Axios, Recharts
+
+- Setup React BootStrap, Tailwind CSS, Axios and Recharts
 
 #### Module-52: Simple React Router
 
