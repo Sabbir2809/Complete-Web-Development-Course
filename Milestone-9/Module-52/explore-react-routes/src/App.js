@@ -1,24 +1,58 @@
 import './App.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import Home from './components/Home/Home';
+import About from './components/About/About';
+import Footer from './components/Footer/Footer';
+import Main from './layout/Main';
+import Friends from './components/Friends/Friends';
+import FriendDetails from './components/FriendDetails/FriendDetails';
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <h3>Default Page</h3>,
+      element: <Main />,
+      children: [
+        {
+          path: '/',
+          element: <Home />,
+        },
+        {
+          path: '/home',
+          element: <Home />,
+        },
+        {
+          path: '/about',
+          element: <About />,
+        },
+        {
+          path: '/friends',
+          loader: async () => {
+            return fetch('https://jsonplaceholder.typicode.com/users');
+          },
+          element: <Friends />,
+        },
+        {
+          path: '/friend/:friendId',
+          loader: async ({ params }) => {
+            // console.log(params.friendId);
+            return fetch(`https://jsonplaceholder.typicode.com/users/${params.friendId}`);
+          },
+          element: <FriendDetails />,
+        },
+      ],
     },
     {
-      path: '/home',
-      element: <h3>Home Page</h3>,
+      path: '/footer',
+      element: <Footer />,
     },
     {
-      path: '/about',
-      element: <h3>About Page</h3>,
+      path: '*',
+      element: <div>This Route Not Found! 404</div>,
     },
   ]);
   return (
     <div className='App'>
-      <h1>Explore React Router</h1>
       <RouterProvider router={router} />
     </div>
   );
