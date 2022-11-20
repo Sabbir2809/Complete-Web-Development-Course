@@ -15,3 +15,9 @@
 1. ternary operation condition ? true : false
 1. && (if condition is true, i want to display something)
 1. || (if condition is false, i want to display something)
+
+## Context API
+
+1. Declare a Context
+1. set provider with value
+1. useContext in the place where you want to get the context

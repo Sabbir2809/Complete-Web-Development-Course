@@ -1,0 +1,11 @@
+.grandpa, .grandpa div {
+  border: 2px solid lightblue;
+  margin: 0 auto;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.flex {
+  display: flex;
+}
+
