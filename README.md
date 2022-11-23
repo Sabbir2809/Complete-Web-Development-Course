@@ -429,3 +429,7 @@
 #### Module-55: Educational Website Assignment-9
 
 ---
+
+## Milestone-10: React Authentication
+
+#### Module-56: Simple React Firebase Authentication
