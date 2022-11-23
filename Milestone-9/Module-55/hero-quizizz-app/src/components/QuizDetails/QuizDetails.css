@@ -1,0 +1,63 @@
+.quiz-details {
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.question-details {
+  width: 100vh;
+  box-shadow: 0px 0px 15px royalblue;
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.quiz-title {
+  color: royalblue;
+}
+
+.css-button-3d--sky {
+  font-size: 14px;
+  width: 90%;
+  margin: 15px;
+  height: 60px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: #3a86ff;
+  box-shadow: 0 5px #4433ff;
+}
+
+.css-button {
+  font-size: 14px;
+  width: 90%;
+  margin: 15px;
+  height: 60px;
+  color: #fff;
+  padding: 5px 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  outline: none;
+  border-radius: 5px;
+  border: none;
+  background: green;
+  box-shadow: 0 5px #4433ff;
+}
+.css-button-3d--sky:hover {
+  box-shadow: 0 3px #4433ff;
+  top: 1px;
+}
+.css-button-3d--sky:active {
+  box-shadow: 0 0 #4433ff;
+  top: 5px;
+}
+
+.eye-icon:hover {
+  cursor: pointer;
+}

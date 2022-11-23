@@ -1,0 +1,21 @@
+.blogs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.blog-card {
+  width: 400px;
+  border: 2px solid #0e4c97;
+  padding: 30px;
+  margin: 15px;
+  color: black;
+  box-shadow: 0px 0px 20px royalblue;
+  border-radius: 5px;
+}
+.blog-title {
+  color: royalblue;
+  margin-bottom: 15px;
+}
+.image {
+  border-radius: 5px;
+}
