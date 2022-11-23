@@ -421,3 +421,11 @@
 #### Module-52: Simple React Router
 
 #### Module-52.5: MealDB Search & Routing
+
+#### Module-53: ema-john with router & custom hook
+
+#### Module-54: Router Deploy, Simple Context API, DevTool
+
+#### Module-55: Educational Website Assignment-9
+
+---
