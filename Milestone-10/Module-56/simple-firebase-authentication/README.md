@@ -1,5 +1,7 @@
 ## React With Firebase
 
+### Initial Setup:
+
 1. Visit: console.firebase.google.com
 1. Create a new firebase project
 1. visit doc (go to docs): Build > Authentication > Web > Getting Started
@@ -7,6 +9,9 @@
 1. Install firebase for you project : _npm install firebase_
 1. Dangerous: Get firebase config & put it in firebase.init.js
 1. export app from firebase.init.js
+
+### Setup The Provider:
+
 1. create auth using getAuth from firebase by using app from firebase.init.js
 1. create a google auth provider. don not forget to use new: _const provider = new GoogleAuthProvider();_
 1. go to firebase > Build > Authentication > Sign in method
@@ -14,3 +19,9 @@
 1. create a button for google sing in method with a click handler
 1. inside the event handler, call signInWithPopup with auth, provider
 1. after signInWithPopup .then result, error
+
+## Add a new Sign in method
+
+1. enable the sign in method
+1. create github, twitter, facebook etc app create
+1. get clientId & Secret
