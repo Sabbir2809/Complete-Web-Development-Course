@@ -7,6 +7,6 @@
 
 ## Get Form Value:
 
-1. set form onSubmit Handler
-1. set event parameter
+1. Set form onSubmit Handler
+1. Set event parameter
 1. event.target.email.value

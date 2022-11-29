@@ -3,25 +3,26 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import app from '../firebase/firebase.init';
 
-//
+// Firebase (get auth)
 const auth = getAuth(app);
 
 const LoginBootstrap = () => {
-  //
+  // state
   const [success, setSuccess] = useState(false);
   const [userEmail, setUserEmail] = useState('');
-  //
+
+  // form handleSubmit function
   const handleSubmit = (event) => {
-    //
+    // page reload off
     event.preventDefault();
     setSuccess(false);
-    //
+    // form value extract
     const form = event.target;
     const email = form.email.value;
     const password = form.password.value;
     // console.log(email, password);
 
-    //
+    // Firebase (signInWithEmailAndPassword)
     signInWithEmailAndPassword(auth, email, password)
       .then((result) => {
         // const user = result.user;
@@ -33,19 +34,20 @@ const LoginBootstrap = () => {
       });
   };
 
-  //
+  // email extract for form
   const handleEmailBlur = (event) => {
     const email = event.target.value;
     setUserEmail(email);
     // console.log(email);
   };
 
-  //
+  // forget password function
   const handleForgetPassword = () => {
     if (!userEmail) {
       alert('Please Enter Your Email Address');
       return;
     }
+    // Firebase (sendPasswordResetEmail)
     sendPasswordResetEmail(auth, userEmail)
       .then(() => {
         alert('Password Reset Email Sent. Please Check Your Email Address');

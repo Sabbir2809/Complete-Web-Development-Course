@@ -9,27 +9,33 @@ import {
 import app from './firebase/firebase.init';
 import { useState } from 'react';
 
+// Firebase (getAuth)
 const auth = getAuth(app);
 
 function App() {
+  // State
   const [user, setUser] = useState({});
-  // provider
+  // provider (Google, GitHub)
   const googleProvider = new GoogleAuthProvider();
   const githubProvider = new GithubAuthProvider();
 
+  // Google Sign In Function
   const handleGoogleSignIn = () => {
+    // Firebase (signInWithPopup)
     signInWithPopup(auth, googleProvider)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log(user);
+        // console.log(user);
       })
       .catch((error) => {
         console.error('Error: ', error);
       });
   };
 
+  // Sign Out Function
   const handleSignOut = () => {
+    // Firebase (Sign Out)
     signOut(auth)
       .then(() => {
         setUser({});
@@ -39,12 +45,14 @@ function App() {
       });
   };
 
+  // Sign In GitHub Function
   const handleGithubSignIn = () => {
+    // Firebase (signInWithPopup)
     signInWithPopup(auth, githubProvider)
       .then((result) => {
         const user = result.user;
         setUser(user);
-        console.log(user);
+        // console.log(user);
       })
       .catch((error) => {
         console.error('Error: ', error);
