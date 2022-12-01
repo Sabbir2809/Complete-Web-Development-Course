@@ -20,16 +20,22 @@ const Header = () => {
       <Link to='/' className='btn btn-ghost normal-case text-ml'>
         Home
       </Link>
-      <Link to='/login' className='btn btn-ghost normal-case text-ml'>
-        Login
-      </Link>
       <Link to='/register' className='btn btn-ghost normal-case text-ml'>
         Register
       </Link>
+      <Link to='/orders' className='btn btn-ghost normal-case text-ml'>
+        Orders
+      </Link>
       {user?.email && <span>Hi, {user.email}</span>}
-      <button onClick={handleSignOut} className='ml-5 btn-sm btn-warning '>
-        Log Out
-      </button>
+      {user?.email ? (
+        <button onClick={handleSignOut} className='ml-5 btn-sm btn-warning '>
+          Log Out
+        </button>
+      ) : (
+        <Link to='/login'>
+          <button className='ml-5 btn-sm btn-warning '>Login</button>
+        </Link>
+      )}
     </div>
   );
 };

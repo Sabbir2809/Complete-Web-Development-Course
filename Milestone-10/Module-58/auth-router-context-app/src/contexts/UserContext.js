@@ -18,10 +18,8 @@ const googleProvider = new GoogleAuthProvider();
 const auth = getAuth(app);
 // UserContext
 const UserContext = ({ children }) => {
-  const [user, setUser] = useState({
-    displayName: 'Sabbir Hossain',
-    age: 24,
-  });
+  const [user, setUser] = useState({});
+  const [loading, setLoading] = useState(true);
 
   // createUserWithEmailAndPassword
   const createUser = (email, password) => {
@@ -46,7 +44,8 @@ const UserContext = ({ children }) => {
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
-      console.log(currentUser);
+      setLoading(false);
+      // console.log(currentUser);
     });
     return () => {
       unsubscribe();
@@ -54,7 +53,7 @@ const UserContext = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, createUser, signIn, logOut, signInWithGoogle }}>
+    <AuthContext.Provider value={{ user, createUser, signIn, logOut, signInWithGoogle, loading }}>
       {children}
     </AuthContext.Provider>
   );
