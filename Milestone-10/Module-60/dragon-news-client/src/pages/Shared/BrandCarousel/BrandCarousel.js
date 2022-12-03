@@ -3,7 +3,7 @@ import Carousel from 'react-bootstrap/Carousel';
 import band1 from './../../../assets/bands/band1.png';
 import band2 from './../../../assets/bands/band2.png';
 
-const Home = () => {
+const BrandCarousel = () => {
   return (
     <div>
       <Carousel>
@@ -18,4 +18,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default BrandCarousel;
