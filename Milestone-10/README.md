@@ -7,3 +7,5 @@
 #### Module-58: Router Auth Integration & Private Route
 
 #### Module-59: Private Route Recap with Ema-John
+
+#### Module-60: Recap with a Responsive React Website
