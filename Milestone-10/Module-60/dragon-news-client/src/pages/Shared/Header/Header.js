@@ -1,11 +1,24 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+import { FaUser } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
+import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import LeftSideNav from '../LeftSideNav/LeftSideNav';
+import Image from 'react-bootstrap/Image';
+import Button from 'react-bootstrap/Button';
 
 const Header = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
   return (
     <div>
       <Navbar className='mb-5' collapseOnSelect expand='lg' bg='light' variant='light'>
@@ -23,6 +36,34 @@ const Header = () => {
               <LeftSideNav></LeftSideNav>
             </div>
           </Navbar.Collapse>
+          <Nav>
+            <Nav.Link>
+              {user?.uid ? (
+                <>
+                  <span>{user?.displayName}</span>
+                  <Button variant='primary' onClick={handleLogOut}>
+                    Log Out
+                  </Button>
+                </>
+              ) : (
+                <>
+                  <Button variant='warning'>
+                    <Link to='/login'>Login</Link>
+                  </Button>
+                  <Button variant='warning'>
+                    <Link to='/register'>Register</Link>
+                  </Button>
+                </>
+              )}
+            </Nav.Link>
+            <Nav.Link eventKey={2}>
+              {user?.photoURL ? (
+                <Image roundedCircle style={{ height: '50px' }} src={user.photoURL}></Image>
+              ) : (
+                <FaUser />
+              )}
+            </Nav.Link>
+          </Nav>
         </Container>
       </Navbar>
     </div>

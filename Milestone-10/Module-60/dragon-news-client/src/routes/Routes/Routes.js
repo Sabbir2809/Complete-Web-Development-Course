@@ -1,5 +1,7 @@
 import { createBrowserRouter } from 'react-router-dom';
 import Main from '../../layout/Main';
+import Login from '../../login/Login/Login';
+import Register from '../../login/Login/Register';
 import Category from '../../pages/Category/Category/Category';
 import Home from '../../pages/Home/Home/Home';
 import News from '../../pages/News/News/News';
@@ -29,6 +31,14 @@ export const routes = createBrowserRouter([
           return fetch(`http://localhost:5000/news/${params.id}`);
         },
         element: <News></News>,
+      },
+      {
+        path: '/login',
+        element: <Login></Login>,
+      },
+      {
+        path: '/register',
+        element: <Register></Register>,
       },
     ],
   },
