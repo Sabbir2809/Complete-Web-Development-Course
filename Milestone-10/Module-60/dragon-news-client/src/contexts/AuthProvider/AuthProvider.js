@@ -9,39 +9,52 @@ import {
   signOut,
 } from 'firebase/auth';
 
+// createContext
 export const AuthContext = createContext();
 const auth = getAuth(app);
 
 const AuthProvider = ({ children }) => {
+  // state
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
+  // signInWithPopup
   const providerLogin = (provider) => {
     return signInWithPopup(auth, provider);
   };
 
+  // createUserWithEmailAndPassword
   const createUser = (email, password) => {
+    setLoading(true);
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
+  // signInWithEmailAndPassword
   const signIn = (email, password) => {
+    setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  // signOut
   const logOut = () => {
+    setLoading(true);
     return signOut(auth);
   };
 
+  // onAuthStateChanged
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
       console.log('USer Auth Inside State Change', currentUser);
       setUser(currentUser);
+      setLoading(false);
     });
     return () => {
       unsubscribe();
     };
   }, []);
 
-  const authInfo = { user, providerLogin, logOut, createUser, signIn };
+  // Share authInfo
+  const authInfo = { user, providerLogin, logOut, createUser, signIn, loading };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
 

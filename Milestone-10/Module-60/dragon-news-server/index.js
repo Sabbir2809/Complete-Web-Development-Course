@@ -1,20 +1,23 @@
+// express
 const express = require('express');
 const app = express();
+// cors
 const cors = require('cors');
 const port = process.env.PORT || 5000;
 
 app.use(cors());
 
-// categories data load
+// categories data load(file)
 const categories = require('./data/categories.json');
 
-// news data load
+// news data load(file)
 const news = require('./data/news.json');
 
+// test api
 app.get('/', (req, res) => {
   res.send('News API Running');
 });
-//  categories url
+//  categories api
 app.get('/news-categories', (req, res) => {
   res.send(categories);
 });
@@ -34,13 +37,14 @@ app.get('/news', (req, res) => {
   res.send(news);
 });
 
-// news
+// news api
 app.get('/news/:id', (req, res) => {
   const id = req.params.id;
   const selectedNews = news.find((n) => n._id === id);
   res.send(selectedNews);
 });
 
+// port
 app.listen(port, () => {
   console.log('Dragon News Server running on port', port);
 });

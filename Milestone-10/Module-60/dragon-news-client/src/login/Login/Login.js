@@ -1,13 +1,21 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
+  // State
   const { signIn } = useContext(AuthContext);
+  const [error, setError] = useState('');
+  // navigate
   const navigate = useNavigate();
+  // location
+  const location = useLocation();
 
+  const from = location.state?.from?.pathname || '/';
+
+  // handleSubmit
   const handleSubmit = (event) => {
     event.preventDefault();
     const form = event.target;
@@ -17,10 +25,13 @@ const Login = () => {
     signIn(email, password)
       .then(() => {
         form.reset();
-        navigate('/');
+        setError('');
+        // navigate('/');
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error);
+        setError(error.message);
       });
   };
 
@@ -34,7 +45,7 @@ const Login = () => {
       <Form.Group className='mb-3' controlId='formBasicPassword'>
         <Form.Label>Password</Form.Label>
         <Form.Control name='password' type='password' placeholder='Password' required />
-        <Form.Text className='text-danger'>error</Form.Text>
+        <Form.Text className='text-danger'>{error}</Form.Text>
       </Form.Group>
 
       <Button variant='primary' type='submit'>
