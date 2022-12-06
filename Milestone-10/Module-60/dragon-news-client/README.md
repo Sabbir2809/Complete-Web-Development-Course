@@ -15,5 +15,8 @@
 ## Private Route:
 
 1. only allow authenticated user to visit the route
-1.
 1. Redirect user to the route they wanted to go before login
+
+### Website Link:
+
+https://dragon-news-4cfa7.web.app
