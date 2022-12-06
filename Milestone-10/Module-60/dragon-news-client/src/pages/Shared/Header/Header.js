@@ -56,13 +56,13 @@ const Header = () => {
                 </>
               )}
             </>
-            <Nav.Link eventKey={2}>
+            <Link to='/profile' eventKey={2}>
               {user?.photoURL ? (
-                <Image roundedCircle style={{ height: '50px' }} src={user.photoURL}></Image>
+                <Image roundedCircle style={{ height: '40px' }} src={user.photoURL}></Image>
               ) : (
                 <FaUser />
               )}
-            </Nav.Link>
+            </Link>
           </Nav>
         </Container>
       </Navbar>

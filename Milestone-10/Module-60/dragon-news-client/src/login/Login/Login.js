@@ -7,7 +7,7 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 
 const Login = () => {
   // State
-  const { signIn, user } = useContext(AuthContext);
+  const { signIn, user, setLoading } = useContext(AuthContext);
   const [error, setError] = useState('');
   // navigate
   const navigate = useNavigate();
@@ -37,6 +37,9 @@ const Login = () => {
       .catch((error) => {
         console.error(error);
         setError(error.message);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
