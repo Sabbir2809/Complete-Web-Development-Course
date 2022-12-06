@@ -1,12 +1,16 @@
 import React, { useContext, useState } from 'react';
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import toast from 'react-hot-toast';
+import { Toast } from 'react-bootstrap';
 
 const Register = () => {
   // state
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updatedUserProfile, verifyEmail } = useContext(AuthContext);
   const [error, setError] = useState('');
+  const [accepted, setAccepted] = useState(false);
 
   // handleSubmit
   const handleSubmit = (event) => {
@@ -22,12 +26,40 @@ const Register = () => {
       .then(() => {
         form.reset();
         setError('');
+        handleUpdateUserProfile(name, photoURL);
+        handleEmailVerification();
+        toast.success('Successfully created!');
       })
       .catch((error) => {
         console.error(error);
         setError(error.message);
       });
   };
+
+  const handleUpdateUserProfile = (name, photoURL) => {
+    const profile = {
+      displayName: name,
+      photoURL: photoURL,
+    };
+    updatedUserProfile(profile)
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleEmailVerification = () => {
+    verifyEmail()
+      .then(() => {})
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+
+  const handleAccepted = (event) => {
+    setAccepted(event.target.checked);
+  };
+
   return (
     <Form onSubmit={handleSubmit}>
       <Form.Group className='mb-3' controlId='formBasicName'>
@@ -50,10 +82,22 @@ const Register = () => {
         <Form.Control type='password' name='password' placeholder='Password' required />
         <Form.Text className='text-danger'>{error}</Form.Text>
       </Form.Group>
+      <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+        <Form.Check
+          onClick={handleAccepted}
+          type='checkbox'
+          label={
+            <>
+              Accept <Link to='/terms'>Terms & Conditions</Link>{' '}
+            </>
+          }
+        />
+      </Form.Group>
 
-      <Button variant='primary' type='submit'>
-        Submit
+      <Button variant='primary' type='submit' disabled={!accepted}>
+        Register
       </Button>
+      <Toast></Toast>
     </Form>
   );
 };

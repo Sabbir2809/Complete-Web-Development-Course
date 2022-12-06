@@ -4,9 +4,11 @@ import {
   createUserWithEmailAndPassword,
   getAuth,
   onAuthStateChanged,
+  sendEmailVerification,
   signInWithEmailAndPassword,
   signInWithPopup,
   signOut,
+  updateProfile,
 } from 'firebase/auth';
 
 // createContext
@@ -35,6 +37,15 @@ const AuthProvider = ({ children }) => {
     return signInWithEmailAndPassword(auth, email, password);
   };
 
+  //
+  const updatedUserProfile = (profile) => {
+    return updateProfile(auth.currentUser, profile);
+  };
+
+  const verifyEmail = () => {
+    return sendEmailVerification(auth.currentUser);
+  };
+
   // signOut
   const logOut = () => {
     setLoading(true);
@@ -44,8 +55,10 @@ const AuthProvider = ({ children }) => {
   // onAuthStateChanged
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      console.log('USer Auth Inside State Change', currentUser);
-      setUser(currentUser);
+      // console.log('USer Auth Inside State Change', currentUser);
+      if (currentUser === null || currentUser.emailVerified) {
+        setUser(currentUser);
+      }
       setLoading(false);
     });
     return () => {
@@ -54,7 +67,16 @@ const AuthProvider = ({ children }) => {
   }, []);
 
   // Share authInfo
-  const authInfo = { user, providerLogin, logOut, createUser, signIn, loading };
+  const authInfo = {
+    user,
+    providerLogin,
+    logOut,
+    createUser,
+    signIn,
+    loading,
+    updatedUserProfile,
+    verifyEmail,
+  };
   return <AuthContext.Provider value={authInfo}>{children}</AuthContext.Provider>;
 };
 

@@ -37,7 +37,7 @@ const Header = () => {
             </div>
           </Navbar.Collapse>
           <Nav>
-            <Nav.Link>
+            <>
               {user?.uid ? (
                 <>
                   <span>{user?.displayName}</span>
@@ -55,7 +55,7 @@ const Header = () => {
                   </Button>
                 </>
               )}
-            </Nav.Link>
+            </>
             <Nav.Link eventKey={2}>
               {user?.photoURL ? (
                 <Image roundedCircle style={{ height: '50px' }} src={user.photoURL}></Image>
