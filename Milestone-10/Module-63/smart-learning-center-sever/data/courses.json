@@ -1,0 +1,41 @@
+[
+  {
+    "id": 1,
+    "courseTitle": "Introduction to Computer Science",
+    "description": "Introduction to the use of computer hardware and software as tools for solving problems. Automated input devices and output methods (including pre-printed stationary and turnaround documents) as part of the solution. Using personal computers as effective problem solving tools for the present and the future. Theory behind solving problems using common application software including word processing, spreadsheets, database management, and electronic communications. Problem solving using the Internet and the World Wide Web. Programming principles and use of macros to support the understanding of application software. ",
+    "img":"https://img.freepik.com/free-vector/flat-design-cms-concept-illustrated_23-2148796510.jpg?w=1060&t=st=1670431500~exp=1670432100~hmac=443526492bc3a56b90467f0b4fda0f95c12d38ca6edd0798d585b3de13e7fa95"
+  },
+  {
+    "id": 2,
+    "courseTitle": "Data Structures",
+    "description": "Introduction to widely used and effective methods of data organisation, focussing on data structures, their algorithms and the performance of these algorithms. Concepts and examples, elementary data objects, elementary data structures, arrays, lists, stacks, queues, graphs, trees, compound structures, data abstraction and primitive operations on these structures. memory management; sorting and searching; hash techniques; Introduction to the fundamental algorithms and data structures: recursion, backtrack search, lists, stacks, queues, trees, operation on sets, priority queues, graph dictionary. Introduction to the analysis of algorithms to process the basic structures. A brief introduction to database systems and the analysis of data structure performance and use in these systems. ",
+    "img":"https://img.freepik.com/free-vector/data-extraction-concept-illustration_114360-4876.jpg?w=740&t=st=1670431295~exp=1670431895~hmac=14461a8d3917395bcef4ce40c9068dab94f3ef62f70439059a39823f1820c949"    
+  },
+  {
+    "id": 3,
+    "courseTitle": "Algorithms",
+    "description": "The study of efficient algorithms and effective algorithm design techniques. Techniques for analysis of algorithms, Methods for the design of efficient algorithms :Divide and Conquer paradigm, Greedy method, Dynamic programming, Backtracking, Basic search and traversal techniques, Graph algorithms, Elementary parallel algorithms, Algebraic simplification and transformations, Lower bound theory, NP-hard and NP-complete problems. Techniques for the design and analysis of efficient algorithms, Emphasising methods useful in practice. sorting; Data structures for sets: Heaps, Hashing; Graph algorithms: Shortest paths, Depth-first search, Network flow, Computational geometry; Integer arithmetic: gcd, primality; polynomial and matrix calculations; amortised analysis; Performance bounds, asymptotic and analysis, worst case and average case behaviour, correctness and complexity.",
+    "img":"https://pandorafms.com/blog/wp-content/uploads/2018/05/what-is-an-algorithm-featured.png"
+  },
+  {
+    "id": 4,
+    "courseTitle": "Object Oriented Programming",
+    "description": "An introduction to object oriented programming using. Java is the language typically used to illustrate the concepts, but another suitable language may be substituted by the instructor. Topics covered include object instances, classes, inheritance, polymorphism and abstraction mechanism. Problem domain analysis and system design using object oriented approach. Object oriented database and object persistency. Software principles for object oriented approach. Advantages and problems with using object oriented approach to developing systems.",
+    "img":"https://blog.internshala.com/wp-content/uploads/2020/11/What-is-OOP-in-Java.jpg"
+    
+  },
+  {
+    "id": 5,
+    "courseTitle": "Operating Systems",
+    "description": "Principles of operating systems: design objects; sequential process; concurrent processes, functional mutual exclusion, processor co-operation and deadlocks, management. Control and scheduling of large information processing systems. Dispatching processor access methods, job control languages memory addressing, paging and store multiplexing, and time sharing, batch processing. Scheduling algorithms, file systems, and security; semaphores and critical sections, device drivers, multiprocessing, sharing, design and implementation methodology, performance evaluation and case studies.",
+    "img": "https://scientips.com/wp-content/uploads/2020/07/7-1024x1024.jpg"
+    
+  },
+  {
+    "id": 6,
+    "courseTitle": "Artificial Intelligence",
+    "description": "Survey of concepts in artificial intelligence. Knowledge representation, search and Control techniques. AI machines and features of LISP and PROLOG languages. Problem Representation; search, constraint propagation, rule chaining, frame inheritance, inference and learning in intelligent systems; systems for general problems solving, game playing, expert consultation, concept formation and natural languages processing; recognition, understanding and translation. Use of heuristic vs. algorithmic programming; cognitive simulations - vs. machine intelligence; study of some expert systems such as robotics and understanding. Solving problems in Al languages.",
+    "img": "https://imageio.forbes.com/specials-images/imageserve/5f278facccb6d3d3cc3c63b1/3-Important-Ways-Artificial-Intelligence-Will-Transform-Your-Business-And-Turbocharge/960x0.jpg?format=jpg&width=960"
+    
+  }
+]

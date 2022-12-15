@@ -15,3 +15,7 @@
 #### Module-62: Build a Authentication system for Dragon News
 
 #### Module-62.5: Firebase auth & simple site practice
+
+#### Module-63: React Auth Assignment 10
+
+#### Module-63.5: Dynamic Title & Google Map

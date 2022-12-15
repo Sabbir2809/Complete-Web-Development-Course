@@ -5,12 +5,15 @@ import { Link } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import toast from 'react-hot-toast';
 import { Toast } from 'react-bootstrap';
+import useTitle from '../../hooks/useTitle';
 
 const Register = () => {
   // state
   const { createUser, updatedUserProfile, verifyEmail } = useContext(AuthContext);
   const [error, setError] = useState('');
   const [accepted, setAccepted] = useState(false);
+  // title
+  useTitle('Register');
 
   // handleSubmit
   const handleSubmit = (event) => {
