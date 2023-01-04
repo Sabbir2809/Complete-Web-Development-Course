@@ -1,0 +1,211 @@
+* {
+  margin: 0;
+}
+
+body {
+  font-family: "Hind Siliguri", sans-serif;
+  font-family: "Inter", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+/*  */
+h1 {
+  font-size: 60px;
+}
+
+h2 {
+  font-size: 30px;
+}
+
+.header-section {
+  background-image: url(./images/donation6.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 714px;
+}
+
+.header-content {
+  color: white;
+  text-align: center;
+  padding-top: 200px;
+}
+
+.header-section > div > p {
+  margin-bottom: 30px;
+}
+
+.link-btn {
+  text-decoration: none;
+  background-color: #ff5959;
+  padding: 15px 30px;
+  color: white;
+  border-radius: 5px;
+  font-weight: 500;
+}
+
+.title-content-center {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.title-content-center h1,
+p {
+  margin: 15px;
+}
+
+.donetion-taka {
+  display: flex;
+  justify-content: center;
+}
+
+.tk {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  background-color: #fafafa;
+  border-radius: 5px;
+  margin: 10px;
+  color: #707070;
+  cursor: pointer;
+}
+
+.bg-color {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 120px;
+  height: 60px;
+  background-color: #ffeeee;
+  color: #ff5959;
+  border: 1px solid;
+  margin: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+}
+
+input[type="number"]::placeholder {
+  text-align: center;
+}
+
+input[type="number"] {
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #ff5959;
+}
+
+.others-donate {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  margin-bottom: 120px;
+}
+
+
+/* Our Donate Plan Section */
+.donate-plan {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px;
+  margin-bottom: 120px;
+}
+
+.plan-1 {
+  background-color: #edf5f6;
+  margin: 10px;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+}
+.plan-2 {
+  background-color: #ffeeee;
+  margin: 10px;
+  border-radius: 5px;
+  width: 400px;
+  height: 200px;
+  padding: 20px;
+}
+.plan-3 {
+  background-color: #fff4d6;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+  width: 400px;
+  height: 200px;
+}
+
+
+/*  */
+.card {
+  width: 20%;
+  display: inline-block;
+  box-shadow: 2px 2px 20px black;
+  border-radius: 5px;
+  margin: 2%;
+}
+
+.image img {
+  width: 100%;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.title {
+  text-align: center;
+  padding: 10px;
+}
+
+.img-size {
+  width: 50%;
+  height: 50%;
+}
+
+.input-bg {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: antiquewhite;
+  padding: 100px;
+  margin: 50px;
+}
+
+.input-bg > input {
+  background-color: #d9d9d9;
+}
+
+
+/* Footer Section */
+footer {
+  background-color: #0b0d17;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+footer > h2 {
+  color: #ff5959;
+  padding: 10px;
+  font-family: "Inter UI";
+  font-style: italic;
+}
+footer > p {
+  color: white;
+}
+
