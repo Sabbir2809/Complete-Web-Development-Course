@@ -1,5 +1,6 @@
 const express = require('express');
 const cors = require('cors');
+const { MongoClient, ServerApiVersion } = require('mongodb');
 const app = express();
 app.use(cors());
 app.use(express.json());
@@ -24,22 +25,65 @@ const users = [
   },
 ];
 
+// User: ADMIN_SABBIR
+// Password: E6DdrLCp4GZralhY
+const uri =
+  'mongodb+srv://ADMIN_SABBIR:E6DdrLCp4GZralhY@cluster0.an7cx.mongodb.net/?retryWrites=true&w=majority';
+const client = new MongoClient(uri, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+  serverApi: ServerApiVersion.v1,
+});
+
+async function run() {
+  try {
+    const userCollection = client.db('simpleNode').collection('users');
+
+    app.get('/users', async (req, res) => {
+      const cursor = userCollection.find({});
+      const users = await cursor.toArray();
+      res.send(users);
+    });
+
+    // const result = await userCollection.insertOne(user);
+    // console.log(result);
+    app.post('/users', async (req, res) => {
+      // console.log('Post API Called');
+      const user = req.body;
+      const result = await userCollection.insertOne(user);
+      console.log(result);
+      user._id = result.insertedId;
+      res.send(user);
+    });
+  } finally {
+  }
+}
+
+run().catch((error) => console.error(error));
+
 app.get('/', (req, res) => {
   res.send('Simple Node Server Running');
 });
 
-app.get('/users', (req, res) => {
-  res.send(users);
-});
+// app.get('/users', (req, res) => {
+//   if (req.query.name) {
+//     // filter users by query
+//     const search = req.query.name;
+//     const filtered = users.filter((usr) => usr.name.toLowerCase().indexOf(search) >= 0);
+//     res.send(filtered);
+//   } else {
+//     res.send(users);
+//   }
+// });
 
-app.post('/users', (req, res) => {
-  console.log('Post API Called');
-  const user = req.body;
-  user.id = users.length + 1;
-  users.push(user);
-  console.log(user);
-  res.send(user);
-});
+// app.post('/users', (req, res) => {
+//   // console.log('Post API Called');
+//   const user = req.body;
+//   user.id = users.length + 1;
+//   users.push(user);
+//   console.log(user);
+//   res.send(user);
+// });
 
 app.listen(port, () => {
   console.log(`Simple Node Server Running on port ${port}`);
@@ -53,4 +97,16 @@ app.listen(port, () => {
     - add body to the fetch to send data
     - make sure to use JSON.stringify() to send data
     - use express.json() as meddle ware
+*/
+
+/*
+  Query: path?name=value&key=value
+*/
+
+/*
+  1. sign up mongodb atlas
+  2. db_user
+  3. whitelist your ip address
+  4. database > connect > show entire code
+  5. npm i mongodb
 */

@@ -45,8 +45,8 @@ function App() {
       </form>
       <h2>{users.length}</h2>
       {users.map((user) => (
-        <p key={user.id}>
-          {user.name} {user.email}
+        <p key={user._id}>
+          <b>{user.name}</b> {user.email}
         </p>
       ))}
     </div>
