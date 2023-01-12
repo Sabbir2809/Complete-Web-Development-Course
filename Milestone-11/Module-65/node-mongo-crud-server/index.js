@@ -1,6 +1,6 @@
 const express = require('express');
 const cors = require('cors');
-const { MongoClient, ServerApiVersion, Collection } = require('mongodb');
+const { MongoClient, ServerApiVersion, Collection, ObjectId } = require('mongodb');
 const app = express();
 const port = process.env.PORT || 5000;
 // middleware
@@ -26,6 +26,13 @@ async function run() {
       res.send(users);
     });
 
+    app.get('/users/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const user = await userCollection.findOne(query);
+      res.send(user);
+    });
+
     // const user = {
     //   name: 'test',
     //   email: 'test@gmail.com',
@@ -38,8 +45,36 @@ async function run() {
       const result = await userCollection.insertOne(user);
       res.send(result);
     });
+
+    app.put('/users/:id', async (req, res) => {
+      const id = req.params.id;
+      const filter = {
+        _id: ObjectId(id),
+      };
+      const user = req.body;
+      const option = { upsert: true };
+      const updatedUser = {
+        $set: {
+          name: user.name,
+          address: user.address,
+          email: user.email,
+        },
+      };
+      // console.log(updatedUser);
+      const result = await userCollection.updateOne(filter, updatedUser, option);
+      res.send(result);
+    });
+
+    // delete operation
+    app.delete('/users/:id', async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await userCollection.deleteOne(query);
+      console.log(result);
+      res.send(result);
+    });
   } finally {
-    console.log('Inserted!');
+    console.log('Nice!');
   }
 }
 run().catch((error) => {
