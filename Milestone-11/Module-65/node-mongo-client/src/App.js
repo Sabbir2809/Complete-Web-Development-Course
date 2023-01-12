@@ -7,6 +7,7 @@ function App() {
     {
       path: '/',
       element: <Home></Home>,
+      loader: () => fetch('http://localhost:5000/users'),
     },
     {
       path: '/users/add',
