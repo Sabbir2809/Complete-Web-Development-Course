@@ -3,6 +3,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import Home from './components/Home';
 import AddUser from './components/AddUser';
 import Update from './components/Update';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -20,9 +21,10 @@ function App() {
       loader: ({ params }) => fetch(`http://localhost:5000/users/${params.id}`),
     },
   ]);
+
   return (
     <div>
-      <h1 className='title'>Node Mongo</h1>
+      <h1 className='title'>Node With Mongo</h1>
       <RouterProvider router={router}></RouterProvider>
     </div>
   );

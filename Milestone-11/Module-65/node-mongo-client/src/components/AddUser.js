@@ -34,9 +34,9 @@ const AddUser = () => {
     // console.log(newUser);
   };
   return (
-    <div>
-      <h2>Please Add a New User: </h2>
+    <div className='form-section'>
       <form onSubmit={handleAddUser}>
+        <legend>Please add a new user</legend>
         <input onBlur={handleInputBlur} type='text' name='name' placeholder='name' required />
         <br />
         <input onBlur={handleInputBlur} type='text' name='address' placeholder='address' required />

@@ -329,10 +329,10 @@
 
 #### Module-42: JavaScript you need to know for React
 
-- Six JavaScript Fundamentals that you need to know (variable, condition, loop, array, function, )
-- Template string, arrow function, spread operator
+- Six JavaScript Fundamentals that you need to know (variable, conditions, loops, array, function, Object)
+- Template string, arrow function, spread operator(...)
 - Array methods(map(), filter(), find(), forEach())
-- Array & Object Destructuring, Optional Chaining
+- Array & Object Destructuring, Optional Chaining(?)
 - JSON, fetch, keys, values, array add, remove using dots
 - truthy, falsy & Ternary Operator
 - Explore LocalStorage & SessionStorage with JSON
@@ -350,7 +350,7 @@
 #### Module-44: Modern Front-End Core Concepts
 
 - Modern Application core parts
-- Web component, 4 types of component, identify
+- Web component, 2 types of component, identify
   component
 - Template, dynamically create HTML elements based on data
 - Single Page Application (SPA), Performance benefit
