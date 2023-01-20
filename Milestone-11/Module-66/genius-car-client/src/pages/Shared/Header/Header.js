@@ -7,11 +7,12 @@ const Header = () => {
     <>
       <li className='font-semibold'>
         <Link to='/'>Home</Link>
+        <Link to='/login'>Login</Link>
       </li>
     </>
   );
   return (
-    <div className='navbar h-20 mb-12 pt-12 bg-base-100'>
+    <div className='navbar h-20 mb-5 pt-10 bg-base-100'>
       <div className='navbar-start'>
         <div className='dropdown'>
           <label tabIndex={0} className='btn btn-ghost lg:hidden'>
