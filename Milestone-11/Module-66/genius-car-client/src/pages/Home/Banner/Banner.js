@@ -9,7 +9,7 @@ import BannerItem from './BannerItem';
 
 const bannerData = [
   {
-    image: banner1,
+    image: banner6,
     prev: 6,
     id: 1,
     next: 2,
@@ -39,7 +39,7 @@ const bannerData = [
     next: 6,
   },
   {
-    image: banner6,
+    image: banner1,
     prev: 5,
     id: 6,
     next: 1,
