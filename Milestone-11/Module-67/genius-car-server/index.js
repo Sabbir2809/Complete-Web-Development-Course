@@ -19,6 +19,9 @@ const client = new MongoClient(uri, {
 async function run() {
   try {
     const serviceCollection = client.db('geniusCar').collection('services');
+    const orderCollection = client.db('geniusCar').collection('orders');
+
+    // services API
     app.get('/services', async (req, res) => {
       const query = {};
       const cursor = serviceCollection.find(query);
@@ -32,11 +35,32 @@ async function run() {
       const service = await serviceCollection.findOne(query);
       res.send(service);
     });
+
+    // Orders API
+    app.get('/orders', async (req, res) => {
+      console.log(req.query.email);
+      let query = {};
+      if (req.query.email) {
+        query = {
+          email: req.query.email,
+        };
+      }
+      const cursor = orderCollection.find(query);
+      const orders = await cursor.toArray();
+      res.send(orders);
+    });
+
+    app.post('/orders', async (req, res) => {
+      const order = req.body;
+      const result = await orderCollection.insertOne(order);
+      res.send(result);
+    });
   } finally {
+    console.log('Done');
   }
 }
 
-run().catch((error) => console.error());
+run().catch((error) => console.error(error));
 
 const port = process.env.PORT || 5000;
 
