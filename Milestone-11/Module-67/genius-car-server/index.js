@@ -1,13 +1,15 @@
 const express = require('express');
 const cors = require('cors');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
-const app = express();
 require('dotenv').config();
+const app = express();
+
+const port = process.env.PORT || 5000;
+
 // middleware
 app.use(cors());
 app.use(express.json());
 
-//);
 const uri = `mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@cluster0.an7cx.mongodb.net/?retryWrites=true&w=majority`;
 
 const client = new MongoClient(uri, {
@@ -18,6 +20,7 @@ const client = new MongoClient(uri, {
 
 async function run() {
   try {
+    // database create
     const serviceCollection = client.db('geniusCar').collection('services');
     const orderCollection = client.db('geniusCar').collection('orders');
 
@@ -28,7 +31,7 @@ async function run() {
       const services = await cursor.toArray();
       res.send(services);
     });
-
+    // services only is api
     app.get('/services/:id', async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
@@ -38,7 +41,7 @@ async function run() {
 
     // Orders API
     app.get('/orders', async (req, res) => {
-      console.log(req.query.email);
+      // console.log(req.query.email);
       let query = {};
       if (req.query.email) {
         query = {
@@ -56,13 +59,11 @@ async function run() {
       res.send(result);
     });
   } finally {
-    console.log('Done');
+    // Always run
   }
 }
 
 run().catch((error) => console.error(error));
-
-const port = process.env.PORT || 5000;
 
 app.get('/', (req, res) => {
   res.send('Genius Car is Running');
