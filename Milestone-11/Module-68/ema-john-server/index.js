@@ -28,10 +28,14 @@ async function run() {
 
     // Read
     app.get('/products', async (req, res) => {
+      const page = req.query.page;
+      const size = req.query.size;
+      console.log(page, size);
       const query = {};
       const cursor = productCollection.find(query);
       const products = await cursor.toArray();
-      res.send(products);
+      const count = await productCollection.estimatedDocumentCount();
+      res.send({ count, products });
     });
   } finally {
     //

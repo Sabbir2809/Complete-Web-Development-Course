@@ -19,9 +19,9 @@ function App() {
       children: [
         {
           path: '/',
-          loader: () => {
-            return fetch('http://localhost:5000/products');
-          },
+          // loader: () => {
+          //   return fetch('http://localhost:5000/products');
+          // },
           element: <Shop />,
         },
         {

@@ -5,10 +5,35 @@ import { addToDb, deleteShoppingCart, getStoredCart } from '../../utilities/fake
 import './Shop.css';
 import { Link, useLoaderData } from 'react-router-dom';
 
+/*
+  count: loaded
+  perPage: 10
+  pages: count / perPage
+  currentPage: 
+*/
+
 const Shop = () => {
   // const [products, setProducts] = useState([]);
-  const products = useLoaderData();
+  // const { products, count } = useLoaderData();
+  const [products, setProducts] = useState([]);
+  const [count, setCount] = useState(0);
+
   const [cart, setCart] = useState([]);
+  const [page, setPage] = useState(0);
+  const [size, setSize] = useState(10);
+
+  useEffect(() => {
+    const url = `http://localhost:5000/products?page=${page}&size=${size}`;
+    console.log(page, size);
+    fetch(url)
+      .then((res) => res.json())
+      .then((data) => {
+        setCount(data.count);
+        setProducts(data.products);
+      });
+  }, [page, size]);
+
+  const pages = Math.ceil(count / size);
 
   const clearCart = () => {
     setCart([]);
@@ -67,6 +92,25 @@ const Shop = () => {
             <button>Review Order</button>
           </Link>
         </Cart>
+      </div>
+      <div className='pagination'>
+        <p>Currently Selected Page: {page}</p>
+        {[...Array(pages).keys()].map((number) => (
+          <button
+            key={number}
+            onClick={() => setPage(number)}
+            className={page === number && 'selected'}>
+            {number}
+          </button>
+        ))}
+        <select onChange={(event) => setSize(event.target.value)}>
+          <option value='5'>5</option>
+          <option value='10' selected>
+            10
+          </option>
+          <option value='15'>15</option>
+          <option value='20'>20</option>
+        </select>
       </div>
     </div>
   );
