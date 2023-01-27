@@ -1,10 +1,15 @@
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import loginSVG from './../../assets/images/login/login.svg';
 
 const Login = () => {
   const { login } = useContext(AuthContext);
+
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const from = location.state?.from?.pathname || '/';
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -16,6 +21,7 @@ const Login = () => {
       .then((result) => {
         // const user = result.user;
         // console.log(user);
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error(error);
@@ -46,7 +52,7 @@ const Login = () => {
                 <span className='label-text'>Password</span>
               </label>
               <input
-                type='text'
+                type='password'
                 name='password'
                 placeholder='password'
                 className='input input-bordered'
