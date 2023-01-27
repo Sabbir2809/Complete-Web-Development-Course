@@ -463,3 +463,5 @@
 #### Module-67: Genius Car Node Mongo CRUD Recap
 
 #### Module-68: Pagination & Load Data by Filter
+
+#### Module-69: Introduction to JWT & Secure API using JWT
