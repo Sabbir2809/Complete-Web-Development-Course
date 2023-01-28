@@ -19,6 +19,23 @@ const client = new MongoClient(uri, {
   serverApi: ServerApiVersion.v1,
 });
 
+// verifyJWT function
+function verifyJWT(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return res.status(401).send({ message: 'Unauthorized Access' });
+  }
+  const token = authHeader.split(' ')[1];
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
+    if (error) {
+      return res.status(403).send({ message: 'Unauthorized Access' });
+    }
+    req.decoded = decoded;
+    next();
+  });
+}
+
+// CURD
 async function run() {
   try {
     // database create
@@ -27,7 +44,7 @@ async function run() {
 
     app.post('/jwt', (req, res) => {
       const user = req.body;
-      console.log(user);
+      // console.log(user);
       const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
       res.send({ token });
     });
@@ -48,8 +65,12 @@ async function run() {
     });
 
     // Orders API
-    app.get('/orders', async (req, res) => {
-      // console.log(req.query.email);
+    app.get('/orders', verifyJWT, async (req, res) => {
+      const decoded = req.decoded;
+      // console.log(decoded);
+      if (decoded.email !== req.query.email) {
+        return res.status(403).send({ message: 'Unauthorized Access' });
+      }
       let query = {};
       if (req.query.email) {
         query = {
