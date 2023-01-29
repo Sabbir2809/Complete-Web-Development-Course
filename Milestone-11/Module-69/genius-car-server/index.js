@@ -20,20 +20,20 @@ const client = new MongoClient(uri, {
 });
 
 // verifyJWT function
-function verifyJWT(req, res, next) {
-  const authHeader = req.headers.authorization;
-  if (!authHeader) {
-    return res.status(401).send({ message: 'Unauthorized Access' });
-  }
-  const token = authHeader.split(' ')[1];
-  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
-    if (error) {
-      return res.status(403).send({ message: 'Unauthorized Access' });
-    }
-    req.decoded = decoded;
-    next();
-  });
-}
+// function verifyJWT(req, res, next) {
+//   const authHeader = req.headers.authorization;
+//   if (!authHeader) {
+//     return res.status(401).send({ message: 'Unauthorized Access' });
+//   }
+//   const token = authHeader.split(' ')[1];
+//   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
+//     if (error) {
+//       return res.status(403).send({ message: 'Unauthorized Access' });
+//     }
+//     req.decoded = decoded;
+//     next();
+//   });
+// }
 
 // CURD
 async function run() {
