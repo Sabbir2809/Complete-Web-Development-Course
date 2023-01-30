@@ -20,20 +20,20 @@ const client = new MongoClient(uri, {
 });
 
 // verifyJWT function
-// function verifyJWT(req, res, next) {
-//   const authHeader = req.headers.authorization;
-//   if (!authHeader) {
-//     return res.status(401).send({ message: 'Unauthorized Access' });
-//   }
-//   const token = authHeader.split(' ')[1];
-//   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
-//     if (error) {
-//       return res.status(403).send({ message: 'Unauthorized Access' });
-//     }
-//     req.decoded = decoded;
-//     next();
-//   });
-// }
+function verifyJWT(req, res, next) {
+  const authHeader = req.headers.authorization;
+  if (!authHeader) {
+    return res.status(401).send({ message: 'Unauthorized Access' });
+  }
+  const token = authHeader.split(' ')[1];
+  jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
+    if (error) {
+      return res.status(403).send({ message: 'Forbidden Access' });
+    }
+    req.decoded = decoded;
+    next();
+  });
+}
 
 // CURD
 async function run() {
@@ -82,14 +82,14 @@ async function run() {
       res.send(orders);
     });
 
-    app.post('/orders', async (req, res) => {
+    app.post('/orders', verifyJWT, async (req, res) => {
       const order = req.body;
       const result = await orderCollection.insertOne(order);
       res.send(result);
     });
 
     // delete api
-    app.delete('/orders/:id', async (req, res) => {
+    app.delete('/orders/:id', verifyJWT, async (req, res) => {
       const id = req.params.id;
       const query = { _id: ObjectId(id) };
       const result = await orderCollection.deleteOne(query);
