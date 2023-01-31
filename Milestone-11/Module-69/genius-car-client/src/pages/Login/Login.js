@@ -1,6 +1,7 @@
 import React, { useContext } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import SocialLogin from '../Shared/SocialLogin/SocialLogin';
 import loginSVG from './../../assets/images/login/login.svg';
 
 const Login = () => {
@@ -23,9 +24,9 @@ const Login = () => {
         // console.log(user);
 
         const currentUser = {
-          email: user.email,
+          email: user?.email,
         };
-        console.log(currentUser);
+        // console.log(currentUser);
         // get JWT Token
         fetch('http://localhost:5000/jwt', {
           method: 'POST',
@@ -36,7 +37,7 @@ const Login = () => {
         })
           .then((res) => res.json())
           .then((data) => {
-            console.log(data);
+            // console.log(data);
             // local storage is the easiest but not the best to store JWT Token
             localStorage.setItem('genius-token', data.token);
             navigate(from, { replace: true });
@@ -92,6 +93,7 @@ const Login = () => {
               Sign Up
             </Link>
           </p>
+          <SocialLogin></SocialLogin>
         </div>
       </div>
     </div>

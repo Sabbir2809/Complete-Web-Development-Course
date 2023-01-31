@@ -4,7 +4,7 @@ import OrderRow from './OrderRow';
 
 const Orders = () => {
   const { user, logOut } = useContext(AuthContext);
-  const [orders, setOrders] = useState([]);
+  const [order, setOrder] = useState([]);
 
   useEffect(() => {
     fetch(`http://localhost:5000/orders?email=${user?.email}`, {
@@ -20,7 +20,7 @@ const Orders = () => {
       })
       .then((data) => {
         // console.log(data);
-        setOrders(data);
+        setOrder(data);
       });
   }, [user?.email, logOut]);
 
@@ -38,8 +38,8 @@ const Orders = () => {
           // console.log(data);
           if (data.deletedCount > 0) {
             alert('Deleted Successfully');
-            const remaining = orders.filter((odr) => odr._id !== id);
-            setOrders(remaining);
+            const remaining = order.filter((odr) => odr._id !== id);
+            setOrder(remaining);
           }
         });
     }
@@ -56,13 +56,14 @@ const Orders = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
+        // console.log(data);
         if (data.modifiedCount > 0) {
-          const remaining = orders.filter((odr) => odr._id !== id);
-          const approving = orders.find((odr) => odr._id === id);
+          const remaining = order.filter((odr) => odr._id !== id);
+          const approving = order.find((odr) => odr._id === id);
+
           approving.status = 'Approved';
-          const newOrders = [...remaining, approving];
-          setOrders(newOrders);
+          const newOrder = [...remaining, approving];
+          setOrder(newOrder);
         }
       });
   };
@@ -80,7 +81,7 @@ const Orders = () => {
           </tr>
         </thead>
         <tbody>
-          {orders.map((order) => (
+          {order.map((order) => (
             <OrderRow
               key={order._id}
               order={order}

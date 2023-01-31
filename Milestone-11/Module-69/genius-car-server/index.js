@@ -3,6 +3,7 @@ const cors = require('cors');
 const jwt = require('jsonwebtoken');
 const { MongoClient, ServerApiVersion, ObjectId } = require('mongodb');
 require('dotenv').config();
+
 const app = express();
 
 const port = process.env.PORT || 5000;
@@ -22,10 +23,12 @@ const client = new MongoClient(uri, {
 // verifyJWT function
 function verifyJWT(req, res, next) {
   const authHeader = req.headers.authorization;
+
   if (!authHeader) {
     return res.status(401).send({ message: 'Unauthorized Access' });
   }
   const token = authHeader.split(' ')[1];
+
   jwt.verify(token, process.env.ACCESS_TOKEN_SECRET, function (error, decoded) {
     if (error) {
       return res.status(403).send({ message: 'Forbidden Access' });
@@ -45,7 +48,7 @@ async function run() {
     app.post('/jwt', (req, res) => {
       const user = req.body;
       // console.log(user);
-      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1h' });
+      const token = jwt.sign(user, process.env.ACCESS_TOKEN_SECRET, { expiresIn: '1d' });
       res.send({ token });
     });
 
@@ -56,6 +59,7 @@ async function run() {
       const services = await cursor.toArray();
       res.send(services);
     });
+
     // services only is api
     app.get('/services/:id', async (req, res) => {
       const id = req.params.id;
@@ -78,21 +82,13 @@ async function run() {
         };
       }
       const cursor = orderCollection.find(query);
-      const orders = await cursor.toArray();
-      res.send(orders);
+      const order = await cursor.toArray();
+      res.send(order);
     });
 
     app.post('/orders', verifyJWT, async (req, res) => {
       const order = req.body;
       const result = await orderCollection.insertOne(order);
-      res.send(result);
-    });
-
-    // delete api
-    app.delete('/orders/:id', verifyJWT, async (req, res) => {
-      const id = req.params.id;
-      const query = { _id: ObjectId(id) };
-      const result = await orderCollection.deleteOne(query);
       res.send(result);
     });
 
@@ -109,6 +105,14 @@ async function run() {
       const result = await orderCollection.updateOne(query, updatedDoc);
       res.send(result);
     });
+
+    // delete api
+    app.delete('/orders/:id', verifyJWT, async (req, res) => {
+      const id = req.params.id;
+      const query = { _id: ObjectId(id) };
+      const result = await orderCollection.deleteOne(query);
+      res.send(result);
+    });
   } finally {
     // Always run
   }
@@ -123,5 +127,3 @@ app.get('/', (req, res) => {
 app.listen(port, () => {
   console.log(`Genius Car Server Running on Port ${port}`);
 });
-
-module.exports = app;
