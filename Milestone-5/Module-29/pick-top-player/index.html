@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Sabbir Hossain">
+  <title>Pick the top five players</title>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="./style.css">
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./images/football.png" type="image/x-icon">
+  <!-- BootStrap CSS CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header Section Start -->
+  <header>
+    <section class="banner">
+      <div class="banner__left">
+        <img src="./images/header_1.png" alt="">
+      </div>
+      <div class="banner__content">
+        <h1 id="heading">Pick the top five players</h1>
+        <p class="text">Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+      </div>
+      <div class="banner__right">
+        <img src="./images/header_2.png" alt="">
+      </div>
+    </section>
+  </header>
+  <!-- Header Section End -->
+  <!-- Main Section Start -->
+  <main>
+    <!-- Cards -->
+    <section class="cards">
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_3.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="neymar">Neymar Jr</h4>
+          <button id="select-btn1" class="select__btn">SELECT</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_1.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="messi">Lionel Messi</h4>
+          <button id="select-btn2" class="select__btn">SELECT</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_5.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="mbappe">Kylian Mbappé</h4>
+          <button id="select-btn3" class="select__btn">SELECT</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_2.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="vitor">Vítor Machado</h4>
+          <button id="select-btn4" class="select__btn">SELECT</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_4.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="ramos">Sergio Ramos</h4>
+          <button id="select-btn5" class="select__btn">SELECT</button>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card__img">
+          <img src="./images/player_6.png" alt="">
+        </div>
+        <div class="card__title">
+          <h4 id="renato">Renato Sanches</h4>
+          <button id="select-btn6" class="select__btn">SELECT</button>
+        </div>
+      </div>
+    </section>
+    <!-- Top Five & Budget Section -->
+    <section class="section__right">
+      <div class="top__five">
+        <h3 class="top__title">Top Five</h3>
+        <ol id="list-item">
+          
+        </ol>
+      </div>
+      <div class="budget__section">
+        <h3 class="budget__title">Budget</h3>
+        <div class="per__player">
+          <label for="">Per Player </label>
+          <input id="per-player" type="number">
+        </div>
+        <br>
+        <button id="calculate-player-budget" class="select__btn">Calculate </button>
+        <br>
+        <br>
+        <p>Player Expenses $ <span id="player-expenses"></span></p>
+        <br>
+        <div>
+          <label id="" for="">Manager </label>
+          <input id="manager" type="number">
+        </div>
+        <br>
+        <div>
+          <label for="">Coach </label>
+          <input id="coach" type="number">
+        </div>
+        <br>
+        <button id="calculate-final-budget" class="select__btn">Calculate Total</button>
+        <br>
+        <p>Total $ <span id="final-budget"></span></p>
+      </div>
+    </section>
+  </main>
+  <!-- Main Section End -->
+  <!-- Boostrap JS CDN -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <!-- Custom JavaScript -->
+  <script src="./main.js"></script>
+</body>
+</html>
